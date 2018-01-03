@@ -144,3 +144,4 @@ const drawButtons = () => {
 }
 
 window.onload = () => resetBoard()
+
