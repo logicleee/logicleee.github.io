@@ -112,21 +112,25 @@ const drawButtons = () => {
 
     var btn = document.createElement("button")
     btn.innerHTML = ('+')
+    btn.className += 'btn btn-sm btn-outline-success'
     //btn.addEventListener("click", () => { r++; reDrawRollBtn() })
     btn.addEventListener("click", () => {
         if (r < 6) {
             r++
             reDrawRollBtn()
+            rollDice(r)
         }
     })
     controlBoard.appendChild(btn)
 
     var btn2 = document.createElement("button")
     btn2.innerHTML = ('-')
+    btn2.className += 'btn btn-sm btn-outline-success'
     btn2.addEventListener("click", () => {
         if (r > 1) {
             r--
             reDrawRollBtn()
+            rollDice(r)
         }
     })
     controlBoard.appendChild(btn2)
@@ -134,6 +138,7 @@ const drawButtons = () => {
     var rollBtn = document.createElement("button")
     rollBtn.innerHTML = ('roll ' + r)
     rollBtn.id = ("myRollButton")
+    rollBtn.className += 'btn btn-sm btn-success'
     rollBtn.addEventListener("click", () => { rollDice(r); })
     controlBoard.appendChild(rollBtn)
 
