@@ -88,9 +88,18 @@ const resetBoard = () => {
 
 function createAllElements () {
     const b = document.getElementById("diceBoard")
+    b.className += 'col-md-12'
     const d = document.createElement("p")
     d.id = ("die")
     b.appendChild(d)
+
+    const c = document.createElement("canvas")
+    //c.innerHTML = ('id="diceTable" width="400" height="400"')
+    c.id = ("diceTable")
+    c.width = canvWidth
+    c.height = canvHeight
+    b.appendChild(c)
+
     const ctrls = document.createElement("div")
     ctrls.id = ("controlss")
     b.appendChild(ctrls)
@@ -99,16 +108,11 @@ function createAllElements () {
     ctrlsp.id = ("controls")
     ctrls.appendChild(ctrlsp)
 
-    const c = document.createElement("canvas")
-    //c.innerHTML = ('id="diceTable" width="400" height="400"')
-    c.id = ("diceTable")
-    c.width = canvWidth
-    c.height = canvHeight
-    b.appendChild(c)
 }
 
 const drawButtons = () => {
     var controlBoard = document.getElementById("controlss").getElementsByTagName("p")[0] 
+    controlBoard.className += 'col-md-4 m-md-auto'
 
     var btn = document.createElement("button")
     btn.innerHTML = ('+')
