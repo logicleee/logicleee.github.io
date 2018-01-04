@@ -1,7 +1,6 @@
 /*
  */
 
-
 var dice
 var r = 1
 const canvHeight = 80
@@ -18,22 +17,8 @@ const pips = [
     { id: 8, coords: [3, 3], faces: [1, 3, 5]}
 ]
 
-/*
-const pips = [
-    { id: 0, coords: [-2, -2], faces: [2, 3, 4, 5, 6]},
-    { id: 1, coords: [-2, 0], faces: [6]},
-    { id: 2, coords: [-2, 2], faces: [4, 5, 6]},
-    { id: 3, coords: [0, 2], faces: []},
-    { id: 4, coords: [2, 2], faces: [2, 3, 4, 5, 6]},
-    { id: 5, coords: [2, 0], faces: [6]},
-    { id: 6, coords: [2, -2], faces: [4, 5, 6]},
-    { id: 7, coords: [0, -2], faces: []},
-    { id: 8, coords: [0, 0], faces: [1, 3, 5]}
-]
-
-*/
 const drawSquare = (x,y,w,color) => {
-    let canv = document.getElementById("diceTable")
+    let canv = document.getElementById("diceGameCanvas")
     let ctx = canv.getContext("2d")
     ctx.fillStyle=color
     ctx.fillRect(x,y,w,w)
@@ -73,7 +58,7 @@ const rollDice = (dice) => {
 }
 
 const resetCanvas =  () => {
-    let canv=document.getElementById("diceTable")
+    let canv=document.getElementById("diceGameCanvas")
     let ctx=canv.getContext("2d")
     ctx.fillStyle="black"
     ctx.fillRect(0,0,canv.width,canv.height)
@@ -89,29 +74,27 @@ const resetBoard = () => {
 function createAllElements () {
     const b = document.getElementById("diceBoard")
     b.className += 'col-md-12'
-    const d = document.createElement("p")
-    d.id = ("die")
-    b.appendChild(d)
 
     const c = document.createElement("canvas")
-    //c.innerHTML = ('id="diceTable" width="400" height="400"')
-    c.id = ("diceTable")
+    //c.innerHTML = ('id="diceGameCanvas" width="400" height="400"')
+    c.id = ("diceGameCanvas")
     c.width = canvWidth
     c.height = canvHeight
     b.appendChild(c)
 
     const ctrls = document.createElement("div")
-    ctrls.id = ("controlss")
+    ctrls.id = ("diceGameController")
     b.appendChild(ctrls)
 
-    const ctrlsp = document.createElement("p")
-    ctrlsp.id = ("controls")
-    ctrls.appendChild(ctrlsp)
+    // const ctrlsp = document.createElement("p")
+    // ctrlsp.id = ("oldControlsDiv")
+    // ctrls.appendChild(ctrlsp)
 
 }
 
 const drawButtons = () => {
-    var controlBoard = document.getElementById("controlss").getElementsByTagName("p")[0] 
+    //var controlBoard = document.getElementById("diceGameController").getElementsByTagName("p")[0] 
+    var controlBoard = document.getElementById("diceGameController")
     controlBoard.className += 'col-md-4 m-md-auto'
 
     var btn = document.createElement("button")
