@@ -1,10 +1,8 @@
 /*
  */
 
-let total = 0
-let printStr = ''
-let dice
-let r = 1
+var dice
+var r = 1
 const canvHeight = 80
 const canvWidth = 450
 const pips = [
@@ -19,14 +17,14 @@ const pips = [
     { id: 8, coords: [3, 3], faces: [1, 3, 5]}
 ]
 
-function drawSquare (x,y,w,color) {
+const drawSquare = (x,y,w,color) => {
     let canv = document.getElementById("diceGameCanvas")
     let ctx = canv.getContext("2d")
     ctx.fillStyle=color
     ctx.fillRect(x,y,w,w)
 }
 
-function drawFace (offset, roll) {
+const drawFace = (offset, roll) => {
         for (var j = 0; j < pips.length; j++) {
             if ( pips[j].faces.includes(roll) ) {
                 console.log(pips[j].coords)
@@ -38,6 +36,8 @@ function drawFace (offset, roll) {
 const rollDie = () => Number(Math.floor(Math.random() * 6) + 1)
 
 const rollDice = (dice) => {
+    var total = 0
+    var printStr = ''
     resetCanvas()
     for (i = 1; i <= dice; i++) {
         var roll = rollDie()
@@ -57,14 +57,14 @@ const rollDice = (dice) => {
     return total
 }
 
-function resetCanvas () {
+const resetCanvas =  () => {
     let canv=document.getElementById("diceGameCanvas")
     let ctx=canv.getContext("2d")
     ctx.fillStyle="black"
     ctx.fillRect(0,0,canv.width,canv.height)
 }
 
-function resetBoard () {
+const resetBoard = () => {
     createAllElements()
     resetCanvas()
     drawButtons()
@@ -86,24 +86,26 @@ function createAllElements () {
     ctrls.id = ("diceGameController")
     b.appendChild(ctrls)
 
+    // const ctrlsp = document.createElement("p")
+    // ctrlsp.id = ("oldControlsDiv")
+    // ctrls.appendChild(ctrlsp)
+
 }
 
-function drawButtons () {
-    let totalStr = ''
+const drawButtons = () => {
+    //var controlBoard = document.getElementById("diceGameController").getElementsByTagName("p")[0] 
     var controlBoard = document.getElementById("diceGameController")
     controlBoard.className += 'col-md-4 m-md-auto'
 
     var btn = document.createElement("button")
     btn.innerHTML = ('+')
     btn.className += 'btn btn-sm btn-outline-success'
-
+    //btn.addEventListener("click", () => { r++; reDrawRollBtn() })
     btn.addEventListener("click", () => {
         if (r < 6) {
             r++
             reDrawRollBtn()
             rollDice(r)
-            totalStr = ('total: ' + total)
-            updateTotal(totalStr)
         }
     })
     controlBoard.appendChild(btn)
@@ -116,8 +118,6 @@ function drawButtons () {
             r--
             reDrawRollBtn()
             rollDice(r)
-            totalStr = ('total: ' + total)
-            updateTotal(totalStr)
         }
     })
     controlBoard.appendChild(btn2)
@@ -126,28 +126,12 @@ function drawButtons () {
     rollBtn.innerHTML = ('roll ' + r)
     rollBtn.id = ("myRollButton")
     rollBtn.className += 'btn btn-sm btn-success'
-    rollBtn.addEventListener("click", () => {
-        rollDice(r)
-        totalStr = ('total: ' + total)
-        updateTotal(totalStr)
-        })
+    rollBtn.addEventListener("click", () => { rollDice(r); })
     controlBoard.appendChild(rollBtn)
-
-    var rollTotal = document.createElement("div")
-    rollTotal.innerHTML = ('total: ' + total)
-    rollTotal.id = ("myRollTotal")
-    rollTotal.className += ''
-    controlBoard.appendChild(rollTotal)
 
     function reDrawRollBtn() {
         document.getElementById("myRollButton").innerHTML = ('roll ' + r)
     }
-
-    function updateTotal () {
-        document.getElementById("myRollTotal").innerHTML = (totalStr)
-        total = 0
-    }
-
 
 }
 
