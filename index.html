@@ -1,69 +1,200 @@
-<!DOCTYPE html>
-<html>
-    
-<head>
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-XZQv1hLoS2fXUmX4KoPUf6fBGROZNHMHBvBQFt9qZcHZQ2KpgNgWdkaFgTCinnbD" crossorigin="anonymous"> -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/solar/bootstrap.min.css" rel="stylesheet" integrity="sha384-oGkRAtkjKEZyLYn5WTlt1pofzccgD5/3zF6cSvMBTIiQDF+ihUmOwlnWkXhESZEN" crossorigin="anonymous"> 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script type="text/javascript" src="dice.js"></script>
-</head>
+        <title>Lee Gettys | Software Developer</title>
+        <meta name="description" content="Lee Gettys is a software developer in Honolulu, Hawaii." />
+        <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
 
-<body>
-    <header class="navbar navbar-expand navbar-dark bg-dark flex-column flex-md-row bd-navbar"> 
-    <a class="navbar-brand mr-0 mr-md-2" href=# aria-label="lee gettys">
-        <i class="fa fa-hand-spock-o fa-lg">   lee gettys</i>
-    </a>
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-        <li class="nav-item">
-            <!-- <a class="nav-link" href="https://logiclee.io/blog/" target="_blank" rel="noopener">blog</a>
-        </li> -->
-        </ul>
-    </div>
-    <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
-        <li class="nav-item">
-        <a class="nav-link p-2" href="https://github.com/logicleee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github fa-2x"></i></a>
-        </li>
-        <li class="nav-item">  
-        <a class="nav-link p-2" href="https://www.freecodecamp.org/logicleee" target="_blank" rel="noopener" aria-label="Free-Code-Camp">
-            <i class="fa fa-free-code-camp fa-2x"></i>
-        </a>
-        </li>
-        <li class="nav-item">  
-        <a class="nav-link p-2" href="https://codepen.io/logiclee" target="_blank" rel="noopener" aria-label="codepen">
-            <i class="fa fa-codepen fa-2x"></i>
-        </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link p-2" href="https://www.youtube.com/channel/UC3DxXaQMLoFcEy6FYB3dtqg" target="_blank" rel="noopener" aria-label="YouTube">
-                <i class="fa fa-youtube fa-2x"></i>
-            </a>
-        </li>
-        <li class="nav-item">  
-            <!-- <a class="nav-link p-2" href="https://www.twitter.com/logiclee" target="_blank" rel="noopener" aria-label="Twitter">
-                    <i class="fa fa-twitter fa-2x"></i>
-                 </a> -->
-        </li>
-        <li class="nav-item">  
-        <a class="nav-link p-2" href="https://www.linkedin.com/in/dgettys/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fa fa-linkedin fa-2x"></i>
-        </a>
-        </li>
-    </ul>
-    </header>
-    <main class="bd-masthead" id="content" role="main">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="card border-secondary mb-2">
-                    <div class="card-header">dice.js</div>
-                    <div class="card">
-                        <div id="diceBoard"></div>
+        <!-- http://ogp.me -->
+        <meta property="og:title"       content="Lee Gettys | Software Developer" />
+        <meta property="og:site_name"   content="Lee Gettys" />
+        <meta property="og:url"         content="http://logiclee.io" />
+        <meta property="og:type"        content="website" />
+        <meta property="og:description" content="Lee Gettys is a software developer in Honolulu, Hawaii." />
+
+        <!--Twitter-->
+        <meta name="twitter:site" content="http://logiclee.io" />
+        <meta name="twitter:title" content="Lee Gettys" />
+        <meta name="twitter:description" content="Lee Gettys is a software developer in Honolulu, Hawaii." />
+        <meta name="twitter:card" content="summary" />
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script type="text/javascript" src="dice.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <!-- <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-XZQv1hLoS2fXUmX4KoPUf6fBGROZNHMHBvBQFt9qZcHZQ2KpgNgWdkaFgTCinnbD" crossorigin="anonymous"> -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/solar/bootstrap.min.css" rel="stylesheet" integrity="sha384-oGkRAtkjKEZyLYn5WTlt1pofzccgD5/3zF6cSvMBTIiQDF+ihUmOwlnWkXhESZEN" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <nav class="navbar navbar-toggleable-md navbar-dark">
+                <!-- <a class="navbar-brand" href=#><i class="fa fa-hand-spock-o fa-lg"></i></a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- <nav class="navbar navbar-nav">  -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <div class="navbar-nav px-2 mx-auto">
+                        <a class="nav-item nav-link active" href="#bio">Bio</a>
+                        <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
+                        <!-- <a class="nav-item nav-link" href="https://logiclee.io/blog/" target="_blank" rel="noopener">blog</a> -->
+                        <a class="nav-item nav-link" href="#skills">Skills</a>
+                        <a class="nav-item nav-link" href="#contact">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <section id="bio">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container text-center">
+                    <h1 class="display-1">Hello, World!</h1>
+                    <p class="display-4">I'm Lee.</p>
+                    <p class="lead">I love many things: music, code, and food to name a few.</p>
+                    <p>My current projects include completing the front-end and back-end development certifications on <a href="https://www.freecodecamp.org/logicleee" target="_blank" rel="noopener">freecodecamp.org</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container py-2">
+                <div class="row justify-content-center py-2 my-2">
+                    <h2>Portfolio</h2>
+                </div>
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#diceJsModal">
+                                <img class="card-img-top img-fluid" src="images/dice-js.jpg">
+                            </button>
+                            <div class="card-block">
+                                <div class="card-title">dice.js</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
+                            <div class="card-block">
+                                <div class="card-title">dice.js</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
+                            <div class="card-block">
+                                <div class="card-title">dice.js</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
+                            <div class="card-block">
+                                <div class="card-title">dice.js</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
+                            <div class="card-block">
+                                <div class="card-title">dice.js</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
+                            <div class="card-block">
+                                <div class="card-title">dice.js</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="skills">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <h2 class="py-2 my-2">Skills</h2>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p>I'm handy with JavaScript, Python, Shell, HTML/CSS, and all things Linux and Apple.  Oh, and I do Windows stuff for work.</p>
+                        <p>Check out my
+                            <a href="https://github.com/logicleee" target="_blank" rel="noopener">GitHub</a>,
+                            <a href="https://codepen.io/logiclee" target="_blank" rel="noopener">CodePen</a>, or
+                            <a href="https://www.freecodecamp.org/logicleee" target="_blank" rel="noopener">FreeCodeCamp.org</a>.
+                        </p>
+                        <p>If you would like to get in touch, please message me on
+                            <a href="https://www.linkedin.com/in/dgettys/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+                        <!-- todo: icons -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <!-- <div class="container py-2 my-2"> -->
+            <div class="container">
+                <div class="row justify-content-center py-2 my-2">
+                    <h2>Contact</h2>
+                </div>
+                <div class="row justify-content-center py-2 my-2">
+                    <a class="nav-item nav-link px-3" href="https://github.com/logicleee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github fa-2x"></i></a>
+                    <a class="nav-item nav-link px-3" href="https://www.freecodecamp.org/logicleee" target="_blank" rel="noopener" aria-label="Free-Code-Camp"> <i class="fa fa-free-code-camp fa-2x"></i> </a>
+                    <a class="nav-item nav-link px-3" href="https://codepen.io/logiclee" target="_blank" rel="noopener" aria-label="codepen"> <i class="fa fa-codepen fa-2x"></i> </a>
+                    <a class="nav-item nav-link px-3" href="https://www.youtube.com/channel/UC3DxXaQMLoFcEy6FYB3dtqg" target="_blank" rel="noopener" aria-label="YouTube"> <i class="fa fa-youtube fa-2x"></i> </a>
+                    <a class="nav-item nav-link px-3" href="https://www.linkedin.com/in/dgettys/" target="_blank" rel="noopener" aria-label="LinkedIn"> <i class="fa fa-linkedin fa-2x"></i></a>
+                </div>
+        </section>
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="diceJsModal" tabindex="-1" role="dialog" aria-labelledby="dice.js" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="diceJsModalTitle">dice.js</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div id="diceBoard" class="col-md-4"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-</body>
 
+        <!--
+             <a href="https://github.com/logicleee" target="_blank" rel="noopener">GitHub</a>
+             <a href="https://codepen.io/logiclee" target="_blank" rel="noopener">CodePen</a>
+             <a href="https://www.freecodecamp.org/logicleee" target="_blank" rel="noopener">FreeCodeCamp.org</a>
+             <a href="https://www.linkedin.com/in/dgettys/" target="_blank" rel="noopener">LinkedIn</a>
+             <a class="nav-item nav-link" href="https://www.twitter.com/logiclee" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa fa-twitter fa-2x"></i> </a>
+           -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
 </html>
