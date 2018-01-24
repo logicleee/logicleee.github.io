@@ -4,9 +4,11 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="styles/main.css">
 
         <title>Lee Gettys | Software Developer</title>
         <meta name="description" content="Lee Gettys is a software developer in Honolulu, Hawaii." />
+
         <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
 
         <!-- http://ogp.me -->
@@ -53,14 +55,22 @@
 
         <section id="bio">
             <div class="jumbotron jumbotron-fluid">
-                <div class="container text-center">
-                    <h1 class="display-1">Hello, World!</h1>
-                    <p class="display-4">I'm Lee.</p>
-                    <p class="lead">I love many things: music, code, and food to name a few.</p>
-                    <p>My current projects include completing the front-end and back-end development certifications on <a href="https://www.freecodecamp.org/logicleee" target="_blank" rel="noopener">freecodecamp.org</a>
-                    </p>
+                <!-- <div class="container text-center"> -->
+                <div class="container">
+                    <div class="row  justify-content-center height="50">
+                        <img alt="photo" class="img-responsive img-circle img-max-50" src="images/lee.jpg">
+                    </div>
+                    <div class="row justify-content-center">
+                        <h1 class="display-1 text-center">hello,</h1>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="display-4 text-center">i'm lee.</p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="lead">I love activities that include music, coding, and food.</p>
+                        <p class="lead">I created this page because I needed a better dice game (still a WIP) and a profile page for <a href="https://www.freecodecamp.org/logicleee" target="_blank" rel="noopener">freecodecamp.org</a></p>
+                    </div>
                 </div>
-            </div>
         </section>
 
         <section id="portfolio">
@@ -69,61 +79,28 @@
                     <h2>Portfolio</h2>
                 </div>
                 <div class="row justify-content-center">
-
                     <div class="col-md-6 col-lg-3">
                         <div class="card">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#diceJsModal">
+                            <button type="button" class="btn" data-toggle="modal" data-target="#diceJsModal">
                                 <img class="card-img-top img-fluid" src="images/dice-js.jpg">
                             </button>
-                            <div class="card-block">
-                                <div class="card-title">dice.js</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
-                            <div class="card-block">
-                                <div class="card-title">dice.js</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
-                            <div class="card-block">
-                                <div class="card-title">dice.js</div>
+                            <div class="card-block justify-content-center">
+                                <div class="card-block text-center">dice.js</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
-                            <div class="card-block">
-                                <div class="card-title">dice.js</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
-                            <div class="card-block">
-                                <div class="card-title">dice.js</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid" src="images/dice-js.jpg">
-                            <div class="card-block">
-                                <div class="card-title">dice.js</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
         </section>
+
+        <!-- <div class="col-md-6 col-lg-3">
+             <div class="card">
+             <img class="card-img-top img-fluid" src="images/dice-js.jpg">
+             <div class="card-block">
+             <div class="card-block text-center">dice.js</div>
+             </div>
+             </div>
+             </div>  -->
 
         <section id="skills">
             <div class="jumbotron jumbotron-fluid">
@@ -138,17 +115,14 @@
                             <a href="https://codepen.io/logiclee" target="_blank" rel="noopener">CodePen</a>, or
                             <a href="https://www.freecodecamp.org/logicleee" target="_blank" rel="noopener">FreeCodeCamp.org</a>.
                         </p>
-                        <p>If you would like to get in touch, please message me on
+                        <p>  If you would like to get in touch, please message me on
                             <a href="https://www.linkedin.com/in/dgettys/" target="_blank" rel="noopener">LinkedIn</a>.</p>
-                        <!-- todo: icons -->
                     </div>
                 </div>
-            </div>
             </div>
         </section>
 
         <section id="contact">
-            <!-- <div class="container py-2 my-2"> -->
             <div class="container">
                 <div class="row justify-content-center py-2 my-2">
                     <h2>Contact</h2>
@@ -159,11 +133,11 @@
                     <a class="nav-item nav-link px-3" href="https://codepen.io/logiclee" target="_blank" rel="noopener" aria-label="codepen"> <i class="fa fa-codepen fa-2x"></i> </a>
                     <a class="nav-item nav-link px-3" href="https://www.youtube.com/channel/UC3DxXaQMLoFcEy6FYB3dtqg" target="_blank" rel="noopener" aria-label="YouTube"> <i class="fa fa-youtube fa-2x"></i> </a>
                     <a class="nav-item nav-link px-3" href="https://www.linkedin.com/in/dgettys/" target="_blank" rel="noopener" aria-label="LinkedIn"> <i class="fa fa-linkedin fa-2x"></i></a>
-                </div>
+                    </div>
+            </div>
+            I
         </section>
-        <!-- Button trigger modal -->
 
-        <!-- Modal -->
         <div class="modal fade" id="diceJsModal" tabindex="-1" role="dialog" aria-labelledby="dice.js" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -191,10 +165,11 @@
              <a href="https://www.linkedin.com/in/dgettys/" target="_blank" rel="noopener">LinkedIn</a>
              <a class="nav-item nav-link" href="https://www.twitter.com/logiclee" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa fa-twitter fa-2x"></i> </a>
            -->
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <!--  jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+
     </body>
 </html>
